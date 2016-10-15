@@ -7,7 +7,7 @@ int main()
 {
   Node* newList = NULL;
   Node* tmp = NULL;
-  
+
   newList = new_list();
   newList->val = 'a';
   print_list(newList);

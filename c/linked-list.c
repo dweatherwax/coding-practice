@@ -6,7 +6,11 @@
 
 Node* new_list()
 {
-  return malloc(sizeof(Node));
+  Node* newNode = malloc(sizeof(Node));
+  newNode->val = '\0';
+  newNode->next = NULL;
+
+  return newNode;
 }
 
 
@@ -14,7 +18,7 @@ Node* insert_after(Node* prev, char newVal)
 {
   Node* newNode = NULL;
 
-  newNode = malloc(sizeof(Node));
+  newNode = (Node*) malloc(sizeof(Node));
   newNode->val = newVal;
   
   newNode->next = prev->next;
