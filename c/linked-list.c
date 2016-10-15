@@ -39,6 +39,17 @@ Node* insert_after(Node* prev, char newVal)
   return newNode;
 }
 
+unsigned int list_size(Node* head)
+{
+  unsigned int len = 0;
+
+  while (head != NULL) {
+    len++;
+    head = head->next;
+  }
+
+  return len;
+}
 
 void print_list(const Node* head)
 {

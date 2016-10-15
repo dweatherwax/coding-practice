@@ -15,6 +15,9 @@ void delete_list(Node** l);
 // Insert a new node with a given value after the one passed in
 Node* insert_after(Node* prev, char newVal);
 
+// Return the size of a linked list
+unsigned int list_size(Node* head);
+
 // Print out all the values in a list
 void print_list(const Node* head);
 

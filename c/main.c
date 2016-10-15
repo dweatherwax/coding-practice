@@ -19,10 +19,14 @@ int main()
   printf("new list contents: ");
   print_list(newList);
 
+  printf("size of list: %i\n", list_size(newList));
+
   delete_list(&newList);
 
   printf("list contents after deleting: ");
   print_list(newList);
+
+	 printf("size of list: %i\n", list_size(newList));
 
   return 0;
 }
