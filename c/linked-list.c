@@ -13,6 +13,18 @@ Node* new_list()
   return newNode;
 }
 
+void delete_list(Node** head)
+{
+  Node* node = *head;
+
+  while (node != NULL) {
+    Node* tmp = node->next;
+    free(node);
+    node = tmp;
+  }
+
+  *head = NULL;
+}
 
 Node* insert_after(Node* prev, char newVal)
 {
