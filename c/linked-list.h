@@ -7,17 +7,20 @@ typedef struct Node {
 
 
 // Return a pointer to the first node in a new linked list
-Node* new_list();
+Node* ll_create();
 
 // Deallocate an entire list by iterating through its nodes
-void delete_list(Node** l);
+void ll_clear(Node** l);
 
 // Insert a new node with a given value after the one passed in
-Node* insert_after(Node* prev, char newVal);
+Node* ll_insert_after(Node* prev, char newVal);
+
+// Append a new value at the end of the list
+Node* ll_append(Node* head, char newVal);
 
 // Return the size of a linked list
-unsigned int list_size(Node* head);
+unsigned int ll_size(const Node* head);
 
 // Print out all the values in a list
-void print_list(const Node* head);
+void ll_print(const Node* head);
 

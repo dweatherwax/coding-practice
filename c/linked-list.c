@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 
-Node* new_list()
+Node* ll_create()
 {
   Node* newNode = malloc(sizeof(Node));
   newNode->val = '\0';
@@ -13,7 +13,7 @@ Node* new_list()
   return newNode;
 }
 
-void delete_list(Node** head)
+void ll_clear(Node** head)
 {
   Node* node = *head;
 
@@ -26,7 +26,7 @@ void delete_list(Node** head)
   *head = NULL;
 }
 
-Node* insert_after(Node* prev, char newVal)
+Node* ll_insert_after(Node* prev, char newVal)
 {
   Node* newNode = NULL;
 
@@ -39,7 +39,21 @@ Node* insert_after(Node* prev, char newVal)
   return newNode;
 }
 
-unsigned int list_size(Node* head)
+Node* ll_append(Node* head, char newVal)
+{
+  if (head == NULL) {
+    return NULL;
+  }
+
+  while (head->next != NULL) {
+    head = head->next;
+  }
+
+  return ll_insert_after(head, newVal);
+}
+
+
+unsigned int ll_size(const Node* head)
 {
   unsigned int len = 0;
 
@@ -51,7 +65,7 @@ unsigned int list_size(Node* head)
   return len;
 }
 
-void print_list(const Node* head)
+void ll_print(const Node* head)
 {
   while (head != NULL) {
     printf("%c ", head->val);

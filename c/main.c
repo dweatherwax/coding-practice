@@ -5,28 +5,36 @@
 
 int main()
 {
-  Node* newList = NULL;
+  Node* llHeadPtr = NULL;
   Node* tmp = NULL;
 
-  newList = new_list();
-  newList->val = 'a';
-  print_list(newList);
+  llHeadPtr = ll_create();
+  llHeadPtr->val = 'a';
+  ll_print(llHeadPtr);
 
-  tmp = insert_after(newList, 'b');
-  tmp = insert_after(tmp, 'c');
-  tmp = insert_after(tmp, 'd');
+  tmp = ll_insert_after(llHeadPtr, 'b');
+  tmp = ll_insert_after(tmp, 'c');
+  tmp = ll_insert_after(tmp, 'd');
   
   printf("new list contents: ");
-  print_list(newList);
+  ll_print(llHeadPtr);
 
-  printf("size of list: %i\n", list_size(newList));
+  printf("size of list: %i\n", ll_size(llHeadPtr));
 
-  delete_list(&newList);
+  tmp = ll_append(llHeadPtr, 'e');
+  tmp = ll_append(llHeadPtr, 'f');
+
+  printf("new list contents: ");
+  ll_print(llHeadPtr);
+
+  printf("size of list: %i\n", ll_size(llHeadPtr));
+  
+  ll_clear(&llHeadPtr);
 
   printf("list contents after deleting: ");
-  print_list(newList);
-
-	 printf("size of list: %i\n", list_size(newList));
+  ll_print(llHeadPtr);
+  
+  printf("size of list: %i\n", ll_size(llHeadPtr));
 
   return 0;
 }
