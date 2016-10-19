@@ -28,7 +28,22 @@ int main()
   ll_print(llHeadPtr);
 
   printf("size of list: %i\n", ll_size(llHeadPtr));
-  
+
+  ll_remove(llHeadPtr, 'e');
+
+  printf("new list contents: ");
+  ll_print(llHeadPtr);
+
+  printf("size of list: %i\n", ll_size(llHeadPtr));
+
+  ll_remove(llHeadPtr, 'f');
+
+  printf("new list contents: ");
+  ll_print(llHeadPtr);
+
+  printf("size of list: %i\n", ll_size(llHeadPtr));
+
+
   ll_clear(&llHeadPtr);
 
   printf("list contents after deleting: ");
