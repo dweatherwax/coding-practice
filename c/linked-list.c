@@ -9,7 +9,7 @@ Node* ll_create()
   Node* newNode = malloc(sizeof(Node));
   newNode->val = '\0';
   newNode->next = NULL;
-
+  
   return newNode;
 }
 

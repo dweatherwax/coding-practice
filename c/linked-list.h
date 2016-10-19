@@ -1,3 +1,7 @@
+/*
+ * A Simple singly linked list implementation in C
+ *
+ */
 
 // Linked list node
 typedef struct Node {
@@ -24,7 +28,6 @@ unsigned int ll_remove(Node* head, char val);
 
 // Remove all nodes in the list that matche the given value, returns count of nodes removed
 unsigned int ll_remove_all(Node* head, char val);
-
 
 // Return the size of a linked list
 unsigned int ll_size(const Node* head);
